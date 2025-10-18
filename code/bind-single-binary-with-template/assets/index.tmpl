@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .title }}</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .info h2 {
+            margin-top: 0;
+            color: #ffd700;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li:before {
+            content: "✓ ";
+            color: #4ade80;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ .title }}</h1>
+        
+        <div class="info">
+            <h2>🎉 成功！</h2>
+            <p>这个页面是从嵌入到二进制文件中的模板渲染的。</p>
+        </div>
+
+        <div class="info">
+            <h2>✨ 主要特性</h2>
+            <ul class="feature-list">
+                <li>使用 Go 1.16+ 的 <code>embed</code> 包</li>
+                <li>模板文件被编译进二进制文件</li>
+                <li>无需额外的模板文件部署</li>
+                <li>单个可执行文件即可运行</li>
+                <li>简化部署流程</li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <h2>📦 优势</h2>
+            <ul class="feature-list">
+                <li>部署简单：只需复制一个二进制文件</li>
+                <li>避免路径问题：不用担心模板文件路径</li>
+                <li>版本一致：模板和代码版本完全同步</li>
+                <li>安全性：模板文件不会被意外修改</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>Powered by Gin Framework with Go embed</p>
+        </div>
+    </div>
+</body>
+</html>

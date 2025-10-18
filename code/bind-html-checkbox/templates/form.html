@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gin Checkbox Example</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        form { background: #f4f4f4; padding: 20px; border-radius: 8px; max-width: 400px; margin: auto; }
+        label { display: block; margin-bottom: 5px; }
+        input[type="checkbox"] { margin-right: 10px; }
+        button { padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 15px; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <form action="/" method="POST">
+        <h2>Select your favorite colors:</h2>
+        <div>
+            <input type="checkbox" id="red" name="colors[]" value="red">
+            <label for="red">Red</label>
+        </div>
+        <div>
+            <input type="checkbox" id="green" name="colors[]" value="green">
+            <label for="green">Green</label>
+        </div>
+        <div>
+            <input type="checkbox" id="blue" name="colors[]" value="blue">
+            <label for="blue">Blue</label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
